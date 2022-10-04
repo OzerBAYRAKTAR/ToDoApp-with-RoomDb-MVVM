@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="Arama"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always"/>
+    <item
+        android:icon="@drawable/ic_sort"
+        android:title="Sort"
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/action_sort_by_name"
+                android:title="İsme göre sırala"/>
+            <item
+                android:id="@+id/action_sort_by_date"
+                android:title="Oluşturulma tarihinne göre "/>
+
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_hide_completed_task"
+        android:title="Tamamlanmış notları gizle"
+        android:checkable="true"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_delete_tasks"
+        android:title="Tamamlananları sil"
+        app:showAsAction="never"/>
+
+</menu>

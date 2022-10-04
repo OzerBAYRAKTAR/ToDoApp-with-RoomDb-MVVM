@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.addedittask.AddEditTaskFragment">
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText_task_label"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="7dp"
+            android:textColor="@color/black"
+            android:background="#C89B9B"
+            android:hint="Notunuzu yazın"
+            android:inputType="text"
+            android:paddingStart="9dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBox_important"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:background="#377C2A2A"
+            android:layout_height="wrap_content"
+            android:text="Önemli not"/>
+
+        <EditText
+            android:gravity="top"
+            android:id="@+id/textview_metin"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="7dp"
+            android:background="@android:color/transparent"
+            android:hint="Notun detaylarını giriniz."
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:id="@+id/textView_date_created"
+            android:layout_marginTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Oluşturulduğu Tarih: "/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_save_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_check_mark"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

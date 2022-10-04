@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tasksFragment">
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="com.ozerbayraktar.todoapp.ui.tasks.TasksFragment"
+        android:label="NOTLAR"
+        tools:layout="@layout/fragment_tasks">
+        <action
+            android:id="@+id/action_tasksFragment_to_addEditTaskFragment2"
+            app:destination="@id/addEditTaskFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditTaskFragment2"
+        android:name="com.ozerbayraktar.todoapp.ui.addedittask.AddEditTaskFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_edit_task" >
+        <argument
+            android:name="task"
+            app:argType="com.ozerbayraktar.todoapp.data.roomdb.Task"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/deleteAllCompletedFragment"
+        android:name="com.ozerbayraktar.todoapp.ui.deleteallcompleted.DeleteAllCompletedFragment"
+        android:label="DeleteAllCompletedFragment" /><action android:id="@+id/action_global_deleteAllCompletedFragment" app:destination="@id/deleteAllCompletedFragment"/>
+</navigation>
